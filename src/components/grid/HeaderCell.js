@@ -1,7 +1,7 @@
 import React from "react";
 
 const HeaderCell = ({ children }) => {
-  return <th>{children}</th>;
+  return <th className="header-cell">{children}</th>;
 };
 
 export default HeaderCell;

@@ -1,0 +1,39 @@
+.grid {
+  .grid-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+
+  .grid-body,
+  .grid-header {
+    border-collapse: collapse;
+  }
+
+  .grid-body {
+    border: solid lightgrey 2px;
+  }
+
+  .grid-title {
+    margin: 4vmin 0 3vmin;
+    text-align: left;
+    display: block;
+    border: none;
+  }
+
+  .grid-row {
+    border: solid lightgrey 2px;
+  }
+
+  .header-cell {
+    border: solid lightgrey 2px;
+    background-color: darken(lightgrey, 10%);
+    padding: 0.4em 0.5em;
+  }
+
+  .data-cell {
+    text-align: left;
+    border: solid lightgrey 2px;
+    padding: 0.4em 4vmin 0.4em 0.5em;
+    white-space: nowrap;
+  }
+}
