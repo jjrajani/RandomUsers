@@ -13,11 +13,21 @@ class Grid extends Component {
     return (
       <GridRow>
         {columns.map((col, i) => {
-          console.log("col.sortable", col.sortable);
-          return <HeaderCell key={`${col.label}-${i}`}>{col.label}</HeaderCell>;
+          return (
+            <HeaderCell
+              key={`${col.label}-${i}`}
+              sortable={col.sortable}
+              onSortClick={this.onSortClick.bind(null, col)}
+              label={col.label}
+            />
+          );
         })}
       </GridRow>
     );
+  };
+
+  onSortClick = (col, dir) => {
+    this.props.sortData(col.dataAccr, dir, col.dataType);
   };
 
   gridTitleRow = () => {
@@ -56,7 +66,7 @@ class Grid extends Component {
     let rows = [];
 
     if (data) {
-      rows = data.results.map((d, i) => {
+      rows = data.map((d, i) => {
         return (
           <GridRow key={`${d.id.value || i}`}>{this.rowDataCells(d)}</GridRow>
         );
