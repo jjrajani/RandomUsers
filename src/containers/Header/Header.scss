@@ -1,0 +1,18 @@
+.app-header {
+  padding: 0.5vmin 1em;
+  background-color: #282c34;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+
+  .logo {
+    color: white;
+    font-size: calc(10px + 2vmin);
+    &:hover {
+      a {
+        color: white;
+      }
+    }
+  }
+}
