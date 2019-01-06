@@ -11,20 +11,18 @@ describe("Grid", () => {
         { label: "column 2", dataAccr: "col2", dataType: TYPES.STRING }
       ]
     },
-    data: {
-      results: [
-        {
-          col1: "col1 test data 1",
-          col2: "col2 test data 1",
-          id: { value: "0" }
-        },
-        {
-          col1: "col1 test data 2",
-          col2: "col2 test data 2",
-          id: { value: "1" }
-        }
-      ]
-    }
+    data: [
+      {
+        col1: "col1 test data 1",
+        col2: "col2 test data 1",
+        id: { value: "0" }
+      },
+      {
+        col1: "col1 test data 2",
+        col2: "col2 test data 2",
+        id: { value: "1" }
+      }
+    ]
   };
 
   it(`renders without crashing`, () => {

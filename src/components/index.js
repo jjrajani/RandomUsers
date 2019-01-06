@@ -1,4 +1,12 @@
 import NavItem from "./nav/NavItem";
 import { DataCell, GridRow, HeaderCell } from "./grid";
+import { BornPerDecadeBar, UsersLocations } from "./users_stats";
 
-export { DataCell, GridRow, HeaderCell, NavItem };
+export {
+  BornPerDecadeBar,
+  DataCell,
+  GridRow,
+  HeaderCell,
+  NavItem,
+  UsersLocations
+};

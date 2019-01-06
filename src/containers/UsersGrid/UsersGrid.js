@@ -11,25 +11,29 @@ const gridConfig = {
       label: "First Name",
       dataAccr: "name.first",
       dataType: TYPES.STRING,
+      formatter: "capitalize",
       sortable: true
     },
     {
       label: "Last Name",
       dataAccr: "name.last",
       dataType: TYPES.STRING,
+      formatter: "capitalize",
       sortable: true
     },
     {
       label: "DOB",
       dataAccr: "dob.date",
       dataType: TYPES.DATE,
-      formatter: "MMM Do, YYYY"
+      formatter: "MMM Do, YYYY",
+      sortable: true
     },
     {
       label: "Age",
       dataAccr: "dob.age",
       dataType: TYPES.NUM,
-      formatter: "age"
+      formatter: "age",
+      sortable: true
     },
     { label: "Email", dataAccr: "email", dataType: TYPES.EMAIL }
   ]

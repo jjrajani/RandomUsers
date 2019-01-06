@@ -1,7 +1,13 @@
 import * as TYPES from "../../types";
 import moment from "moment";
 
-const stringFormatter = data => data;
+const stringFormatter = (data, formatterConfig) => {
+  if (formatterConfig === "capitalize") {
+    return data.slice(0, 1).toUpperCase() + data.slice(1);
+  }
+
+  return data;
+};
 
 const numberFormatter = (data, formatterConfig) => {
   if (formatterConfig === "age") {

@@ -5,18 +5,22 @@ import { DataCell, GridRow, HeaderCell } from "../../";
 import * as utils from "../../../utils";
 
 class Grid extends Component {
+  state = {
+    sortedCol: ""
+  };
   headerRow = () => {
     const {
       config: { columns }
     } = this.props;
 
     return (
-      <GridRow>
+      <GridRow className="header">
         {columns.map((col, i) => {
           return (
             <HeaderCell
               key={`${col.label}-${i}`}
               sortable={col.sortable}
+              hasSort={this.state.sortedCol === col.label}
               onSortClick={this.onSortClick.bind(null, col)}
               label={col.label}
             />
@@ -27,6 +31,7 @@ class Grid extends Component {
   };
 
   onSortClick = (col, dir) => {
+    this.setState({ sortedCol: col.label });
     this.props.sortData(col.dataAccr, dir, col.dataType);
   };
 
@@ -35,7 +40,7 @@ class Grid extends Component {
 
     return title ? (
       <tr className="grid-title">
-        <td>{title}</td>
+        <th>{title}</th>
       </tr>
     ) : null;
   };
@@ -80,19 +85,16 @@ class Grid extends Component {
     const { title } = this.props;
     return (
       <div className="grid">
-        <table className="grid-table">
-          <tbody className="grid-header">
-            {title && (
-              <tr className="grid-title">
-                <td>{title}</td>
-              </tr>
-            )}
-          </tbody>
-          <tbody className="grid-body">
-            {this.headerRow()}
-            {this.rows()}
-          </tbody>
-        </table>
+        <section>
+          {title && <th className="grid-title">{title}</th>}
+          <div className="container">
+            <table className="grid-table">
+              <thead className="grid-header">{this.headerRow()}</thead>
+
+              <tbody className="grid-body">{this.rows()}</tbody>
+            </table>
+          </div>
+        </section>
       </div>
     );
   }

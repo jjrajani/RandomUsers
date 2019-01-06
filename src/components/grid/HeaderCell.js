@@ -1,39 +1,31 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+import SortButton from "./SortButton";
 
 export default class HeaderCell extends Component {
-  state = {
-    dir: ""
-  };
-
-  onSortClick = () => {
-    let newDir = "asc";
-    if (this.state.dir === "dec") {
-      newDir = "";
-    } else if (this.state.dir === "asc") {
-      newDir = "dec";
-    }
-
-    this.setState({ dir: newDir });
-    this.props.onSortClick(newDir);
-  };
-
-  sortButton = () => {
-    let className = `sort-button ${this.state.dir}`;
-    return (
-      <p className={className} onClick={this.onSortClick}>
-        Sort
-      </p>
-    );
-  };
-
   render() {
-    const { label, sortable } = this.props;
-
+    const { hasSort, label, onSortClick } = this.props;
+    let sortable = this.props.sortable || false;
+    const onClick = sortable ? onSortClick : () => {};
     return (
       <th className="header-cell">
-        {label}
-        {sortable && this.sortButton()}
+        <div className="fixed">
+          {label}
+          <SortButton
+            onClick={onClick}
+            hasSort={hasSort}
+            disabled={!sortable}
+          />
+        </div>
       </th>
     );
   }
 }
+
+HeaderCell.propTypes = {
+  // PropTypes
+  sortable: PropTypes.bool,
+  label: PropTypes.string.isRequired,
+  onSortClick: PropTypes.func,
+  hasSort: PropTypes.bool
+};

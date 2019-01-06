@@ -1,11 +1,10 @@
+@import "../../styles/mixins";
+
 .nav-item {
   a {
     color: white;
     text-decoration: none;
     padding: 1.5vmin;
-    transition: all 0.2s ease-in;
-    &:hover {
-      color: #61dafb;
-    }
+    @include navHover();
   }
 }

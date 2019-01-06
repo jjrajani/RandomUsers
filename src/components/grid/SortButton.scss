@@ -1,0 +1,33 @@
+.sort-button {
+  position: relative;
+  display: inline-flex;
+  padding: 5px;
+  margin: 0 0 0 10px;
+  flex-direction: column;
+
+  &.disabled {
+    visibility: hidden;
+  }
+
+  .fa-sort-up {
+    font-size: 1em;
+    height: 10px;
+    &.asc {
+      color: black;
+    }
+    &.dec {
+    }
+  }
+
+  .fa-sort-down {
+    font-size: 1em;
+    height: 8px;
+    display: flex;
+    align-items: flex-end;
+    &.asc {
+    }
+    &.dec {
+      color: black;
+    }
+  }
+}

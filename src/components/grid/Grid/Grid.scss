@@ -1,4 +1,7 @@
 .grid {
+  display: inline-block;
+  max-width: 90vw;
+  overflow: scroll;
   .grid-table {
     margin: 0 auto;
     border-collapse: collapse;
@@ -9,25 +12,60 @@
     border-collapse: collapse;
   }
 
+  section {
+    display: inline-block;
+    position: relative;
+    padding-top: calc(2vmin + 57px);
+    background-color: red;
+    border: none;
+    border-bottom: solid lightgrey 2px;
+  }
+
+  .container {
+    background-color: white;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
   .grid-body {
-    border: solid lightgrey 2px;
   }
 
   .grid-title {
-    margin: 4vmin 0 3vmin;
+    position: absolute;
+    top: 0;
+    height: 20px;
+    width: 100%;
     text-align: left;
-    display: block;
-    border: none;
+    border: solid white 1px;
+    background-color: white;
+    padding: 1vmin 1vmin 1vmin 0;
   }
 
   .grid-row {
     border: solid lightgrey 2px;
   }
 
+  .grid-row.header {
+  }
+
   .header-cell {
-    border: solid lightgrey 2px;
-    background-color: darken(lightgrey, 10%);
-    padding: 0.4em 0.5em;
+    border: none;
+    height: 0;
+    line-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    white-space: nowrap;
+    color: transparent;
+    .fixed {
+      border: none;
+      position: absolute;
+      background-color: transparent;
+      color: white;
+      padding: 9px 25px;
+      top: calc(1vmin + 27px);
+      margin-left: -25px;
+      line-height: normal;
+    }
   }
 
   .data-cell {
