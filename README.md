@@ -9,4 +9,4 @@ This application uses the [RandomAPI](https://randomuser.me/).
   - Sort
   - Filter
 - Geolocation
-- Profile
+- Charts
