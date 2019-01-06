@@ -43,7 +43,7 @@ const GenderBar = props => {
         ]}
         layout={{
           autosize: true,
-          title: "Gender Counts"
+          title: "Users by Gender"
         }}
         config={{ displayModeBar: false }}
         useResizeHandler={true}
