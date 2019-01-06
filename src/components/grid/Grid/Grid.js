@@ -82,11 +82,9 @@ class Grid extends Component {
   };
 
   render() {
-    const { title } = this.props;
     return (
       <div className="grid">
         <section>
-          {title && <th className="grid-title">{title}</th>}
           <div className="container">
             <table className="grid-table">
               <thead className="grid-header">{this.headerRow()}</thead>
@@ -101,7 +99,6 @@ class Grid extends Component {
 }
 
 Grid.propTypes = {
-  title: PropTypes.string,
   config: PropTypes.shape({
     columns: PropTypes.arrayOf(
       PropTypes.shape({

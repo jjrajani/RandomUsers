@@ -14,9 +14,9 @@ const GenderBar = props => {
         // is Last
         accum = Object.entries(accum).reduce(
           (acc, year) => {
-            // transform {key: year, value: born count} into plot config
+            // transform {key: gender, value: gender count} into plot config
             return {
-              labels: [...acc.labels, year[0]], // add "0" back to sliced year Ex: 194 back to 1940
+              labels: [...acc.labels, year[0]],
               values: [...acc.values, year[1]]
             };
           },
@@ -36,18 +36,14 @@ const GenderBar = props => {
       <Plot
         data={[
           {
-            name: "",
             type: "bar",
             x: data.labels,
-            y: data.values,
-            hoverinfo: "percent+name",
-            textinfo: "label"
+            y: data.values
           }
         ]}
         layout={{
           autosize: true,
-          title: "Gender Counts",
-          showlegend: false
+          title: "Gender Counts"
         }}
         config={{ displayModeBar: false }}
         useResizeHandler={true}

@@ -1,5 +1,12 @@
+@import "../../styles/vars";
+
 .users-stats {
-  padding: 2vmin 0 0;
+  @media screen and (min-width: 1300px) {
+    .charts-container {
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 
 .chart-wrapper {

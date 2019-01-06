@@ -5,7 +5,7 @@ import moment from "moment";
 
 const BornPerDecadeBar = props => {
   let data = [];
-  console.log("props.data", props.data);
+
   if (props.data) {
     data = props.data.reduce((accum, d, i) => {
       let yearBorn = moment(d.dob.date)

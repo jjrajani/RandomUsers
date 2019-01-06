@@ -34,7 +34,7 @@ const withData = (WrappedComponent, DataSource) => {
         dir,
         dataType
       };
-
+      // TODO: move sort logic to DataSource?
       if (dir === "") {
         this.setState({ filteredData: this._data.slice(0) });
       } else {

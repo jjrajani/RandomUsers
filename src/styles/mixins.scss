@@ -1,6 +1,6 @@
 @mixin navHover() {
   transition: color 0.2s ease-in;
   &:hover {
-    color: #61dafb;
+    color: cadetblue;
   }
 }

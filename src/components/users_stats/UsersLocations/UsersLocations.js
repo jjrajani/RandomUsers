@@ -16,9 +16,12 @@ const MapWithAMarkerClusterer = compose(
     googleMapURL:
       "https://maps.googleapis.com/maps/api/js?key=AIzaSyASfoADlEq3KS_EdhjcOgCnN4WuEhvrE0c&v=3.exp&libraries=geometry,drawing,places",
     loadingElement: <div style={{ height: `100%` }} />,
-    containerElement: <div style={{ height: `37vh` }} />,
+    containerElement: <div className="map-container-el" />,
     mapElement: (
-      <div style={{ height: `100%`, width: "90vw", margin: "0 auto" }} />
+      <div
+        className="map-el"
+        style={{ height: `100%`, width: "90vw", margin: "0 auto" }}
+      />
     )
   }),
   withHandlers({

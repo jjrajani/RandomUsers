@@ -2,4 +2,30 @@
   h3 {
     margin: 0 0 2vmin 0;
   }
+  .map-container-el {
+    height: 33vh;
+    min-height: 300px;
+    margin-bottom: 2vh;
+  }
+
+  .map-el {
+    height: 100%;
+    width: 90vw;
+    margin: 0 auto;
+    border-radius: 4px;
+  }
+
+  @media screen and (min-width: 1300px) {
+    margin-bottom: 5vh;
+    > div {
+      height: 65vh !important;
+    }
+    h3 {
+      margin-right: 5vh;
+    }
+    > div > div {
+      width: 60vw !important;
+      margin: 0px 5vw 0 0 !important;
+    }
+  }
 }

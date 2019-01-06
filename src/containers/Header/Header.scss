@@ -1,7 +1,7 @@
 @import "../../styles/vars";
 
 .app-header {
-  padding: 0.5vmin 1em;
+  padding: 0.5vmin 1vmin 0.5vmin 2.5vmin;
   min-height: 5vh;
   background-color: $dark-grey;
   display: flex;
@@ -11,6 +11,9 @@
   .logo {
     color: white;
     font-size: calc(10px + 2vmin);
+    a {
+      padding: 0;
+    }
     &:hover {
       a {
         color: white;

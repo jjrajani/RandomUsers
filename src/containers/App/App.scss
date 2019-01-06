@@ -6,18 +6,29 @@
 }
 
 .App > div {
-  border: solid green 1px;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-flow: column;
 }
 
 .app-content {
   flex: 1;
+  .main-content {
+    height: 100%;
+    overflow: scroll;
+    .title {
+      text-align: left;
+      background-color: $cadetblue;
+      color: $lightgrey;
+      padding: 0.5vmin 1vmin 0.6vmin 2.5vmin;
+      margin: 0 0 5vmin 0;
+      font-size: 1.2em;
+    }
+  }
 }
 
 footer {
-  height: 6vh;
+  height: 5vh;
   display: flex;
   align-items: center;
   justify-content: center;
