@@ -1,5 +1,6 @@
 {
   "name": "random-users",
+  "homepage": "https://jjrajani.github.io/RandomUsers/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
