@@ -5,4 +5,4 @@
 - Google Maps
 - MarkerClusters
 - Markers
-  ![User Locations](./UserLocations.png?raw=true "Title").
+  ![User Locations](../../../../screenshots/UserLocations.png?raw=true "User Locations").
