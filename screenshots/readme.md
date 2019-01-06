@@ -1,3 +1,7 @@
+###### Users Stats
+
+![Users Stats](./UsersStats.png?raw=true "Users Stats").
+
 ###### Born Per Decade Bar Chart
 
 ![Born Per Decade Bar Chart](./BornPerDecadeBar.png?raw=true "Born Per Decade Bar Chart").
@@ -10,14 +14,10 @@
 
 ![Users Locations](./UsersLocations.png?raw=true "Users Locations").
 
-###### Users Stats
+###### Users Grid
 
-![Users Stats](./UsersStats.png?raw=true "Users Stats").
+![Users Grid](./UsersGrid.png?raw=true "Users Grid").
 
 ###### Grid
 
 ![Grid](./Grid.png?raw=true "Grid").
-
-###### Users Grid
-
-![Users Grid](./UsersGrid.png?raw=true "Users Grid").
