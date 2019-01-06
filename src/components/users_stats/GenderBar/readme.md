@@ -4,4 +4,4 @@
 
 - Ploty.js
 - react-ploty.js
-  ![Gender Bar Chart](../../../../screenshots/GenderBarChart.png?raw=true "Gender Bar Chart").
+- ![Gender Bar Chart](../../../../screenshots/GenderBarChart.png?raw=true "Gender Bar Chart").
