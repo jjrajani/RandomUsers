@@ -43,7 +43,7 @@ const UsersGrid = props => {
   return (
     <div className="users-grid main-content">
       <h2 className="grid-title title">User Grid</h2>
-      <Grid {...props} config={gridConfig} />
+      <Grid {...props} config={gridConfig} gridId="UsersGrid" fixedHeader />
     </div>
   );
 };

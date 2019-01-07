@@ -21,14 +21,15 @@
       background-color: $cadetblue;
       color: $lightgrey;
       padding: 0.5vmin 1vmin 0.6vmin 2.5vmin;
-      margin: 0 0 5vmin 0;
+      margin-bottom: $page-title-margin-bottom;
       font-size: 1.2em;
+      height: $page-title-height;
     }
   }
 }
 
 footer {
-  height: 5vh;
+  height: 6vh;
   display: flex;
   align-items: center;
   justify-content: center;

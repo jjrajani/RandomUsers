@@ -8,8 +8,12 @@ export default class SortButton extends Component {
     dir: ""
   };
 
+  /*
+  * Sorting sorts in the following order: Asc, Dec, Original
+  */
   onSortClick = () => {
     let newDir = "asc";
+
     if (this.state.dir === "dec") {
       newDir = "";
     } else if (this.state.dir === "asc") {
@@ -21,7 +25,7 @@ export default class SortButton extends Component {
   };
 
   componentDidUpdate(prevProps) {
-    // When sort leaves set dir back to '' to clear out previous state.
+    // When sort leaves column, set dir back to '' to clear out previous state.
     if (prevProps.hasSort === true && this.props.hasSort === false) {
       this.setState({ dir: "" });
     }
@@ -29,9 +33,8 @@ export default class SortButton extends Component {
 
   render() {
     const { hasSort, disabled } = this.props;
-
-    let wrapperClassName = disabled ? "sort-button disabled" : "sort-button";
-    let iconClassName = hasSort ? this.state.dir : "";
+    const wrapperClassName = disabled ? "sort-button disabled" : "sort-button";
+    const iconClassName = hasSort ? this.state.dir : "";
 
     return (
       <span className={wrapperClassName}>

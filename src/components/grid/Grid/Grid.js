@@ -8,9 +8,18 @@ class Grid extends Component {
   state = {
     sortedCol: ""
   };
+
+  _gridContainer = React.createRef();
+
+  onSortClick = (col, dir) => {
+    this.setState({ sortedCol: col.label });
+    this.props.sortData(col.dataAccr, dir, col.dataType);
+  };
+
   headerRow = () => {
     const {
-      config: { columns }
+      config: { columns },
+      fixedHeader
     } = this.props;
 
     return (
@@ -18,6 +27,8 @@ class Grid extends Component {
         {columns.map((col, i) => {
           return (
             <HeaderCell
+              gridId={this.props.gridId}
+              isFixed={fixedHeader}
               key={`${col.label}-${i}`}
               sortable={col.sortable}
               hasSort={this.state.sortedCol === col.label}
@@ -28,11 +39,6 @@ class Grid extends Component {
         })}
       </GridRow>
     );
-  };
-
-  onSortClick = (col, dir) => {
-    this.setState({ sortedCol: col.label });
-    this.props.sortData(col.dataAccr, dir, col.dataType);
   };
 
   gridTitleRow = () => {
@@ -51,7 +57,7 @@ class Grid extends Component {
     } = this.props;
 
     let dataCells = columns.map((cell, i) => {
-      const { dataAccr, dataType, formatter } = cell;
+      let { dataAccr, dataType, formatter } = cell;
 
       let formattedData = utils.getFormattedDataFromAccr({
         data,
@@ -68,37 +74,36 @@ class Grid extends Component {
 
   rows = () => {
     const { data } = this.props;
-    let rows = [];
 
-    if (data) {
-      rows = data.map((d, i) => {
-        return (
-          <GridRow key={`${d.id.value || i}`}>{this.rowDataCells(d)}</GridRow>
-        );
-      });
-    }
+    let rows = data.map((d, i) => {
+      return (
+        <GridRow key={`${d.id.value || i}`}>{this.rowDataCells(d)}</GridRow>
+      );
+    });
 
     return rows;
   };
 
   render() {
-    return (
-      <div className="grid">
-        <section>
-          <div className="container">
-            <table className="grid-table">
-              <thead className="grid-header">{this.headerRow()}</thead>
+    const gridId = this.props.gridId || "";
+    const { data } = this.props;
 
-              <tbody className="grid-body">{this.rows()}</tbody>
-            </table>
-          </div>
-        </section>
+    return (
+      <div className="grid" id={gridId} ref={c => (this._gridContainer = c)}>
+        {data && (
+          <table className="grid-table">
+            <thead className="grid-header">{this.headerRow()}</thead>
+            <tbody className="grid-body">{this.rows()}</tbody>
+          </table>
+        )}
       </div>
     );
   }
 }
 
 Grid.propTypes = {
+  gridId: PropTypes.string,
+  fixedHeader: PropTypes.bool,
   config: PropTypes.shape({
     columns: PropTypes.arrayOf(
       PropTypes.shape({
