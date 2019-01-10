@@ -1,11 +1,11 @@
 import React from "react";
 import { mount } from "enzyme";
-import BornPerDecadeBar from "./BornPerDecadeBar";
+import BornPerDecadePie from "./BornPerDecadePie";
 
-describe("BornPerDecadeBar", () => {
+describe("BornPerDecadePie", () => {
   const defaultProps = {};
 
   it(`renders without crashing`, () => {
-    mount(<BornPerDecadeBar {...defaultProps} />);
+    mount(<BornPerDecadePie {...defaultProps} />);
   });
 });

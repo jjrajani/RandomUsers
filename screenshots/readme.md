@@ -4,7 +4,7 @@
 
 ###### Born Per Decade Bar Chart
 
-![Born Per Decade Bar Chart](./BornPerDecadeBar.png?raw=true "Born Per Decade Bar Chart").
+![Born Per Decade Bar Chart](./BornPerDecadePie.png?raw=true "Born Per Decade Bar Chart").
 
 ###### Users Gender Ratio Bar Chart
 

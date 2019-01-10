@@ -35,11 +35,12 @@ const withUserData = (WrappedComponent, DataSource) => {
         dir,
         dataType
       };
-      // TODO: move sort logic to DataSource?
+
       if (dir === "") {
         this.setState({ filteredData: this._data.slice(0) });
       } else {
         let newResults = this.state.filteredData;
+        // TODO: move sort logic to DataSource?
         newResults = sorter(newResults, dataType, sortConfig);
         this.setState({ filteredData: newResults });
       }

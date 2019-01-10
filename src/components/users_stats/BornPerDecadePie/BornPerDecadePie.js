@@ -1,9 +1,9 @@
 import React from "react";
-import "./BornPerDecadeBar.scss";
+import "./BornPerDecadePie.scss";
 import Plot from "react-plotly.js";
 import moment from "moment";
 
-const BornPerDecadeBar = props => {
+const BornPerDecadePie = props => {
   let data = [];
 
   if (props.data) {
@@ -66,4 +66,4 @@ const BornPerDecadeBar = props => {
   );
 };
 
-export default BornPerDecadeBar;
+export default BornPerDecadePie;

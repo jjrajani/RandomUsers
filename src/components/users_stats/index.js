@@ -1,5 +1,5 @@
-import BornPerDecadeBar from "./BornPerDecadeBar/BornPerDecadeBar";
+import BornPerDecadePie from "./BornPerDecadePie/BornPerDecadePie";
 import GenderBar from "./GenderBar/GenderBar";
 import UsersLocations from "./UsersLocations/UsersLocations";
 
-export { BornPerDecadeBar, GenderBar, UsersLocations };
+export { BornPerDecadePie, GenderBar, UsersLocations };

@@ -1,7 +1,7 @@
 import React from "react";
 import "./UsersStats.scss";
 import {
-  BornPerDecadeBar,
+  BornPerDecadePie,
   GenderBar,
   UsersLocations
 } from "../../components/users_stats";
@@ -14,7 +14,7 @@ const UsersStats = props => {
       <h2 className="title">Users Stats</h2>
       <div className="charts-container">
         <div>
-          <BornPerDecadeBar data={props.data} />
+          <BornPerDecadePie data={props.data} />
           <GenderBar data={props.data} />
         </div>
         <UsersLocations data={props.data} />
