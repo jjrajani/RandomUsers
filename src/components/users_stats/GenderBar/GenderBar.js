@@ -1,5 +1,4 @@
 import React from "react";
-import "./GenderBar.scss";
 import Plot from "react-plotly.js";
 
 const GenderBar = props => {
