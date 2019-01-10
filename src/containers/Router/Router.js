@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Profile, UsersGrid, UsersStats } from "../";
+import { Header, UsersGrid, UsersStats } from "../";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const AppRouter = () => {
@@ -10,7 +10,6 @@ const AppRouter = () => {
         <div className="app-content">
           <Route path="/grid" component={UsersGrid} />
           <Route path="/" exact component={UsersStats} />
-          <Route path="/user/:id" component={Profile} />
         </div>
         <footer>
           <a

@@ -6,7 +6,7 @@ import {
   UsersLocations
 } from "../../components/users_stats";
 import { RandomUsersDataSource } from "../../data_sources";
-import { withData } from "../../hoc";
+import { withUserData } from "../../hoc";
 
 const UsersStats = props => {
   return (
@@ -23,4 +23,4 @@ const UsersStats = props => {
   );
 };
 
-export default withData(UsersStats, new RandomUsersDataSource());
+export default withUserData(UsersStats, new RandomUsersDataSource());

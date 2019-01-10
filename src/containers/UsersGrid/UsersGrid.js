@@ -1,8 +1,7 @@
 import React from "react";
-import "./UsersGrid.scss";
 import Grid from "../../components/grid";
 import { RandomUsersDataSource } from "../../data_sources";
-import { withData } from "../../hoc";
+import { withUserData } from "../../hoc";
 import * as TYPES from "../../types";
 
 const gridConfig = {
@@ -48,4 +47,4 @@ const UsersGrid = props => {
   );
 };
 
-export default withData(UsersGrid, new RandomUsersDataSource());
+export default withUserData(UsersGrid, new RandomUsersDataSource());

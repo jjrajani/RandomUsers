@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import sorter from "../utils/sorter";
 
-const withData = (WrappedComponent, DataSource) => {
-  return class WithData extends Component {
+const withUserData = (WrappedComponent, DataSource) => {
+  return class WithUserData extends Component {
     _data: null;
 
     state = {
@@ -11,6 +11,7 @@ const withData = (WrappedComponent, DataSource) => {
 
     componentDidMount = async () => {
       const me = this;
+      // TODO: abstract "users" so withUserData can become reusable withData
       if (localStorage.getItem("users")) {
         console.log("from local");
         me._data = JSON.parse(localStorage.getItem("users"));
@@ -61,4 +62,4 @@ const withData = (WrappedComponent, DataSource) => {
   };
 };
 
-export default withData;
+export default withUserData;

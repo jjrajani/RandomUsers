@@ -1,142 +1,72 @@
-@import "../../../styles/vars";
-
-div.grid {
-  // height: 10vh;
-  display: inline-block;
-  // max-height: calc(100vh - $header-height);
-  // max-height: calc(calc(100vh - $header-height) - $footer-height);
-  // overflow: scroll;
-  // max-width: 100vw;
-  position: relative;
-  // z-index: 1;
-  min-width: 400px;
-  // max-width: 95vw;
-  overflow: scroll;
-  height: calc(
-    100vh - #{$header-height} - #{$footer-height} - #{$page-title-height} - #{$page-title-margin-bottom}
-  );
-  // display: flex;
-  // justify-content: center;
-  table.grid-table {
-    margin: 0 auto 4vh;
-  }
-  thead.grid-header {
-    tr.grid-row.header {
-      th.header-cell {
-        white-space: nowrap;
-        text-align: left;
-        &.fixed {
-          color: transparent;
-        }
-
-        div.fixed {
-          background-color: cadetblue;
-          position: absolute;
-          padding: 2px 2px 2px 5px;
-          top: 0;
-          color: #111111;
-          font-size: 0.8rem;
-          span.sort-button {
-            font-size: 1rem;
-          }
-        }
-      }
-    }
-  }
-
-  tbody.grid-body {
-    // border: solid orange 1px;
-    border: solid lightgrey 2px;
-    border-top: none;
-    tr.grid-row {
-      // border: solid limegreen 1px;
-      &:nth-child(odd) {
-        background-color: lightgrey;
-      }
-      // &:nth-child(even) {
-
-      // }
-      td.data-cell {
-        // border: solid tomato 1px;
-        white-space: nowrap;
-      }
-    }
-  }
-}
-
 .grid {
-  //   display: inline-block;
-  //   max-width: 90vw;
-  //   overflow: scroll;
+  display: inline-block;
+  max-width: 90vw;
+  overflow: scroll;
   .grid-table {
-    //     margin: 0 auto;
+    margin: 0 auto;
     border-collapse: collapse;
   }
-  //
+
   .grid-body,
   .grid-header {
     border-collapse: collapse;
   }
-  //
-  //   section {
-  //     display: inline-block;
-  //     position: relative;
-  //     padding-top: calc(27px + 0.7vmin);
-  //     background-color: cadetblue;
-  //     border: none;
-  //     border-bottom: solid lightgrey 2px;
-  //   }
-  //
-  //   .container {
-  //     background-color: white;
-  //     max-height: 70vh;
-  //     overflow-y: auto;
-  //   }
-  //
-  //   // .grid-body {}
-  //
-  //   .grid-title {
-  //     position: absolute;
-  //     top: 0;
-  //     height: 20px;
-  //     width: 100%;
-  //     text-align: left;
-  //     border: solid white 1px;
-  //     background-color: white;
-  //     padding: 1vmin 1vmin 1vmin 0;
-  //   }
-  //
-  //   .grid-row {
-  //     border: solid lightgrey 2px;
-  //     border-width: 0px 2px 2px 2px;
-  //   }
-  //
-  //   // .grid-row.header {}
-  //
+
+  section {
+    display: inline-block;
+    position: relative;
+    padding-top: calc(27px + 0.7vmin);
+    background-color: cadetblue;
+    border: none;
+    border-bottom: solid lightgrey 2px;
+  }
+
+  .container {
+    background-color: white;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  .grid-title {
+    position: absolute;
+    top: 0;
+    height: 20px;
+    width: 100%;
+    text-align: left;
+    border: solid white 1px;
+    background-color: white;
+    padding: 1vmin 1vmin 1vmin 0;
+  }
+
+  .grid-row {
+    border: solid lightgrey 2px;
+    border-width: 0px 2px 2px 2px;
+  }
+
   .header-cell {
-    //     border: none;
-    //     height: 0;
-    //     line-height: 0;
-    //     padding-top: 0;
-    //     padding-bottom: 0;
-    //     white-space: nowrap;
-    // color: transparent;
+    border: none;
+    height: 0;
+    line-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    white-space: nowrap;
+    color: transparent;
     .fixed {
-      //       border: none;
-      //       position: absolute;
-      //       background-color: transparent;
-      // color: white;
-      //       padding: 3px 25px 9px 25px;
-      //       top: 0;
-      //       margin-left: -19px;
-      //       line-height: normal;
-      //       font-size: calc(10px + 0.7vmin);
+      border: none;
+      position: absolute;
+      background-color: transparent;
+      color: white;
+      padding: 3px 25px 9px 25px;
+      top: 0;
+      margin-left: -19px;
+      line-height: normal;
+      font-size: calc(10px + 0.7vmin);
     }
   }
-  //
+
   .data-cell {
     text-align: left;
-    // border: solid lightgrey 2px;
+    border: solid lightgrey 2px;
     padding: 0.4em 4vmin 0.4em 0.5em;
     white-space: nowrap;
     font-size: calc(10px + 0.7vmin);

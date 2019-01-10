@@ -7,6 +7,5 @@ This application uses the [RandomAPI](https://randomuser.me/).
 - Grid
   - List
   - Sort
-  - Filter
 - Geolocation
 - Charts
